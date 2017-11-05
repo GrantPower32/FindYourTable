@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bookings"
+        android:title="Bookings"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/comments"
+        android:title="View Comments"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/leaveComments"
+        android:title="Leave a Comment"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/login"
+        android:title="Login"
+        app:showAsAction="never"/>
+
+</menu>
