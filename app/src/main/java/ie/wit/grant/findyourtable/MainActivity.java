@@ -7,9 +7,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
+
+import ie.wit.grant.findyourtable.activities.DisplayComments;
+import ie.wit.grant.findyourtable.activities.RegisterActivity;
+import ie.wit.grant.findyourtable.activities.WaterfordForecast;
+import ie.wit.grant.findyourtable.sql.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.bookings:
-                Intent intent1 = new Intent(this, bookings.class);
+                Intent intent1 = new Intent(this, WaterfordForecast.class);
                 this.startActivity(intent1);
                 return true;
             case R.id.comments:
-                Intent intent2 = new Intent(this, comments.class);
+                Intent intent2 = new Intent(this, DisplayComments.class);
                 this.startActivity(intent2);
                 return true;
             case R.id.about:
@@ -68,9 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent5 = new Intent(this, MainLoginActvity.class);
                 this.startActivity(intent5);
                 return true;
+            case R.id.createAccount:
+                Intent intent6 = new Intent(this, RegisterActivity.class);
+                this.startActivity(intent6);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
     }
+
 }

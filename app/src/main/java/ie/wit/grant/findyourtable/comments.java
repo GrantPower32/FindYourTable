@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CursorAdapter;
+
+import ie.wit.grant.findyourtable.sql.DatabaseHelper;
 
 public class comments extends AppCompatActivity {
 
@@ -18,9 +19,12 @@ public class comments extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
-        viewAll();
+        myDb = new DatabaseHelper(this);
+
 
         btnviewAll = (Button)findViewById(R.id.viewAll);
+
+        viewAll();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -54,8 +58,11 @@ public class comments extends AppCompatActivity {
                         showMessage("Comments", buffer.toString());
                     }
                 }
+
         );
     }
+
+
 
     public void showMessage(String title, String Message)
     {

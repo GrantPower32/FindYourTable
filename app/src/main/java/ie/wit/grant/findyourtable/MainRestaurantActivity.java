@@ -15,6 +15,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import ie.wit.grant.findyourtable.activities.DisplayComments;
+import ie.wit.grant.findyourtable.activities.RegisterActivity;
+import ie.wit.grant.findyourtable.activities.WaterfordForecast;
+
 public class MainRestaurantActivity extends AppCompatActivity {
 
     ListView listView;
@@ -81,17 +85,19 @@ public class MainRestaurantActivity extends AppCompatActivity {
         }
     }
 
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
 
 
         switch (item.getItemId()) {
             case R.id.bookings:
-                Intent intent1 = new Intent(this, bookings.class);
+                Intent intent1 = new Intent(this, WaterfordForecast.class);
                 this.startActivity(intent1);
                 return true;
             case R.id.comments:
-                Intent intent2 = new Intent(this, comments.class);
+                Intent intent2 = new Intent(this, DisplayComments.class);
                 this.startActivity(intent2);
                 return true;
             case R.id.about:
@@ -105,6 +111,10 @@ public class MainRestaurantActivity extends AppCompatActivity {
             case R.id.login:
                 Intent intent5 = new Intent(this, MainLoginActvity.class);
                 this.startActivity(intent5);
+                return true;
+            case R.id.createAccount:
+                Intent intent6 = new Intent(this, RegisterActivity.class);
+                this.startActivity(intent6);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

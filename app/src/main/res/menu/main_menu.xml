@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/bookings"
-        android:title="Bookings"
+        android:title="Weather"
         app:showAsAction="never"/>
 
     <item
@@ -26,5 +26,10 @@
         android:id="@+id/login"
         android:title="Login"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/createAccount"
+        android:title="Sign Up"
+        app:showAsAction="never"/>
+
 
 </menu>
